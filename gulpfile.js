@@ -20,12 +20,14 @@ var cssDir = baseDir + "/css"
 var sassDir = baseDir + "/sass"
 var sassIn = baseDir + "/sass/style.scss"
 var jsDir = baseDir + "/js"
-var jsIn = jsDir + "/**/*.js"
+var jsIn = jsDir + "/angular/**/*.js"
 var jsOut = "scripts.js"
 var jsFileList = [
   "/vendor/jquery/jquery-1.12.2.js",
   "/vendor/bootstrap/bootstrap.js",
-  "/vendor/angular-1.5.3/angular.js"
+  "/vendor/angular-1.5.3/angular.js",
+  "/angular/app.js",
+  "/angular/**/*.js"
 ]
 var jsFiles = jsFileList.map(function(file){
   return jsDir + file

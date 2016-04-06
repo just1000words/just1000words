@@ -12,13 +12,13 @@ var www = path.normalize(__dirname + "/../public/")
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
-//Serve js + css
-app.use(express.static(www))
-
 //Serve main page
 app.get("/", function(req, res){
   res.sendFile(www + "index.html")
 })
+
+//Serve js + css
+app.use(express.static(www))
 
 //Forward other requests to root
 app.get("*", function(req, res){

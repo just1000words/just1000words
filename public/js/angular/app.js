@@ -7,8 +7,8 @@ var ideasApp = angular.module("ideasApp", ["ngResource", "ngRoute"])
 ideasApp.config(function($routeProvider, $locationProvider){
 
   $routeProvider.when("/editor", {
-    templateUrl: "/templates/editor.html",
-    controller: "editorController"
+    templateUrl: "/templates/directives/editor.html",
+    controller: "EditorController"
   })
 
   $locationProvider.html5Mode(true)

@@ -45900,8 +45900,8 @@ var ideasApp = angular.module("ideasApp", ["ngResource", "ngRoute"])
 ideasApp.config(function($routeProvider, $locationProvider){
 
   $routeProvider.when("/editor", {
-    templateUrl: "/templates/editor.html",
-    controller: "editorController"
+    templateUrl: "/templates/directives/editor.html",
+    controller: "EditorController"
   })
 
   $locationProvider.html5Mode(true)
@@ -45909,6 +45909,6 @@ ideasApp.config(function($routeProvider, $locationProvider){
 
 "use strict";
 
-ideasApp.controller("editorController", ["$scope", function($scope){
+ideasApp.controller("EditorController", function($scope){
   $scope.message = "Write your ideas in an easy to understand way by using the 1000 most common words"
-}])
+})

@@ -17,7 +17,7 @@ app.use(express.static(www))
 
 //Serve main page
 app.get("*", function(req, res){
-  res.sendfile(www + "index.html")
+  res.sendFile(www + "index.html")
 })
 
 //Listen for requests

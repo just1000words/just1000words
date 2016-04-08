@@ -1,16 +1,15 @@
+"use strict";
+
 //The root Angular app
-console.log("in app")
-var app = angular.module("ideasApp", ["ngResource", "ngRoute"])
+var ideasApp = angular.module("ideasApp", ["ngResource", "ngRoute"])
 
-.config(function($routeProvider, $locationProvider){
-  $routeProvider.when("/test", {
-    template: "<p>test</p>"
-  })
+//Configure Anuglar routes
+ideasApp.config(function($routeProvider, $locationProvider){
 
-  $routeProvider.when("/about", {
-    template: "This is a simple about page"
+  $routeProvider.when("/editor", {
+    templateUrl: "/templates/editor.html",
+    controller: "editorController"
   })
 
   $locationProvider.html5Mode(true)
-  console.log("assumed ready")
 })

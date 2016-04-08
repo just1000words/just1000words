@@ -26,6 +26,8 @@ var jsFileList = [
   "/vendor/jquery/jquery-1.12.2.js",
   "/vendor/bootstrap/bootstrap.js",
   "/vendor/angular-1.5.3/angular.js",
+  "/vendor/angular-1.5.3/angular-resource.js",
+  "/vendor/angular-1.5.3/angular-route.js",
   "/angular/app.js",
   "/angular/**/*.js"
 ]

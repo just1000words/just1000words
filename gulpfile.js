@@ -25,6 +25,7 @@ var jsOut = "scripts.js"
 var jsFileList = [
   "/vendor/jquery/jquery-1.12.2.js",
   "/vendor/bootstrap/bootstrap.js",
+  "/vendor/Squire/squire.js",
   "/vendor/angular-1.5.3/angular.js",
   "/vendor/angular-1.5.3/angular-resource.js",
   "/vendor/angular-1.5.3/angular-route.js",

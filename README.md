@@ -1,4 +1,4 @@
-# ideas
+# Just 1000 Words
 A single-page-app intended to consolidate knowledge of the full MEAN stack
 
 ## About

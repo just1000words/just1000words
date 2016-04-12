@@ -11,8 +11,39 @@
     An application to share and discuss project ideas
   </p>
 
-  <ng-view></ng-view>
+  <iframe src="/js/vendor/Squire/document.html"></iframe>
 
-  <script src="/js/scripts.js" type="text/javascript"></script>
+  <script>
+    var iframe = document.getElementsByTagName("iframe")[0];
+    var editor;
+
+    iframe.onload = function(){
+      editor = iframe.contentWindow.editor;
+      editor.addEventListener("keyup", keyup);
+      editor.addEventListener("select", select);
+    };
+
+    function keyup(event) {
+      switch(event.keyCode) {
+        case 9: //tab
+        case 13: //enter
+        case 32: //space
+        case 186: //semicolon
+        case 188: //comma
+        case 190: //period
+          checkDocument();
+          break;
+      }
+    }
+
+    function select(event) {
+      console.log(editor.getPath())
+    }
+
+    function checkDocument() {
+      console.log(editor.getHTML())
+    }
+  </script>
+
 </body>
 </html>
